@@ -12,7 +12,7 @@ function App() {
 
 
   //USEING THE CONTEX   
-  const authdata = useContext(AuthContex);
+  const [userData,setUserData] = useContext(AuthContex);
 
 
  // handling the login user
@@ -36,8 +36,8 @@ function App() {
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin", }))
     }
     // Check if the user is an employee
-    else if (authdata ) {
-      const employee = authdata.employees.find((e) => email == e.email && password == e.password)
+    else if (userData ) {
+      const employee = userData.find((e) => email == e.email && password == e.password)
       if (employee) {
         setUser("employees");
         setlogInUserData(employee)
@@ -55,8 +55,8 @@ function App() {
   return (
     <>
       {!user && <Login loginHandler={loginHandler} />}
-      {user === "admin" && <Admin />}
-      {user === "employees" && <Employee data ={logInUserData} />}
+      {user === "admin" && <Admin changeUser = {setUser} />}
+      {user === "employees" && <Employee changeUser = {setUser} data ={logInUserData} />}
     </>
   );
 }

@@ -80,7 +80,7 @@ const employees = [
       "active": 5,
       "newTask": 1,
       "completed": 4,
-      "failed": 0
+      "failed": 2
     }
   },
   {
@@ -127,7 +127,7 @@ const employees = [
       "active": 2,
       "newTask": 1,
       "completed": 4,
-      "failed": 0
+      "failed": 1
     }
   },
   {
@@ -163,7 +163,7 @@ const employees = [
       "active": 3,
       "newTask": 5,
       "completed": 6,
-      "failed": 0
+      "failed": 2
     }
   },
   {
@@ -199,7 +199,7 @@ const employees = [
       "active": 1,
       "newTask": 3,
       "completed": 2,
-      "failed": 0
+      "failed": 3
     }
   }
 ];
